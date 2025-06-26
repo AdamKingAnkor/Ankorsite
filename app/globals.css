@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-ankor-navy via-ankor-teal to-ankor-navy;
+    min-height: 100vh;
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .glass-morphism {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  
+  .glass-card {
+    @apply glass-morphism rounded-2xl p-6 hover:bg-white/15 transition-all duration-300;
+  }
+  
+  .glass-button {
+    @apply glass-morphism px-6 py-3 rounded-xl font-semibold text-ankor-white hover:bg-ankor-teal/30 transition-all duration-300 border border-ankor-teal/30;
+  }
+  
+  .glass-input {
+    @apply glass-morphism w-full px-4 py-3 rounded-xl text-ankor-white placeholder-ankor-white/70 focus:outline-none focus:ring-2 focus:ring-ankor-teal/50 transition-all duration-300;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-ankor-teal to-ankor-navy bg-clip-text text-transparent;
+  }
+  
+  .floating-element {
+    @apply animate-float;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-ankor-navy/20;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-ankor-teal/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-ankor-teal/70;
+} 
